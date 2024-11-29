@@ -75,61 +75,67 @@ section{
 
 /*NAVBAR*/
 
-nav{
-color: white;
-   /* Fija el navbar en la parte superior */
-   top: 0; /* Lo coloca en la parte superior de la página */
-   left: 0; /* Alinea el navbar al borde izquierdo */
-   width: 100%; /* Asegura que el navbar ocupe todo el ancho */
-   z-index: 1000; /* Asegura que el navbar se quede encima de otros elementos */
-   
-    border-bottom: 2px solid white;
+nav {
+    text-align: center;
+    color: white;
+    top: 0; /* Lo coloca en la parte superior de la página */
+    left: 0; /* Alinea el navbar al borde izquierdo */
+    width: 100%; /* Asegura que el navbar ocupe todo el ancho */
+    z-index: 1000; /* Asegura que el navbar esté encima de otros elementos */
+    border-bottom: 1px solid white;
 }
 
-
-
-.logo{
-    height: 0px;
+.logo {
+    
     cursor: pointer;
-}
-.logo img{
-    margin-left: 50px;
-    width: 100px;
-    
-}
-nav{
-    display: block;
-    
-    font-family: "Montserrat", sans-serif;
-}
-
-nav ul{
-    display: flex;
-    list-style: none;
-    justify-content: center;
-    
-}
-
-nav ul li{
-    display: block;
+    display: flex; /* Usa flexbox para centrar */
     align-items: center;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 20px;
 
+    justify-content: start;
+}
+
+.logo img {
+    margin-top: 40px;
+    margin-left: 50px; /* Ajusta márgenes si es necesario */
+    width: 50px; /* Ajusta el tamaño del logo */
+}
+
+nav ul {
+    display: flex; /* Flexbox para distribuir elementos */
+    list-style: none; /* Elimina viñetas */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina padding adicional */
+}
+
+nav ul li {
+    text-decoration: none;
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    padding: 20px;
+    font-family: "Montserrat", sans-serif; /* Aplica la fuente */
+    color: white;
+    transition: color 0.3s; /* Animación para hover */
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    color: #f0a500; /* Cambia el color al pasar el mouse */
 }
 
 .c1 {
-    
+    text-align: center;
     border-bottom: none; /* Sin borde por defecto */
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
 }
 
-
-.c1:hover{
-    cursor: pointer;
-   
+.c1 a {
+    text-align: center;
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del texto */
 }
-
 
 .texto li {
     all: unset;
