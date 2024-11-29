@@ -1,4 +1,3 @@
-// Función para aplicar animaciones al hacer scroll o al cargar la página
 function applyScrollAnimations() {
     var elements = document.querySelectorAll('.animate__animated'); // Selecciona todos los elementos con la clase animate__animated
     
@@ -43,3 +42,20 @@ window.addEventListener('scroll', applyScrollAnimations);
 
 // Aplica las animaciones cuando se carga la página por primera vez
 applyScrollAnimations();
+
+
+// Mostrar el ícono de la flecha hacia arriba cuando se hace scroll hacia abajo
+window.onscroll = function() {
+    var scrollToTop = document.getElementById("scroll-to-top");
+    
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollToTop.classList.add("show"); // Aparece la flecha
+    } else {
+        scrollToTop.classList.remove("show"); // Desaparece la flecha
+    }
+};
+
+// Función para hacer scroll hacia arriba
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
